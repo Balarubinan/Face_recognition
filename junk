@@ -1,0 +1,82 @@
+# # # from comtypes.client import CreateObject
+# # #
+# # # text="Hi there, how are you?"
+# # # engine = CreateObject("SAPI.SpVoice")
+# # # stream = CreateObject("SAPI.SpFileStream")
+# # # from comtypes.gen import SpeechLib
+# # # stream.Open('audio.mp3', SpeechLib.SSFMCreateForWrite)
+# # # engine.AudioOutputStream = stream
+# # # engine.speak(text)
+# # # stream.Close()
+# # from playsound import playsound
+# # def play_sound():
+# #     playsound('sentences_folder\\sentence-3.mp3')
+# # import threading
+# # t=threading.Thread(target=play_sound)
+# # t.start()
+# from PyQt5 import QtCore, QtGui, QtWidgets
+# # this segment of ccode is to create a windwo and displaay images and chaange them with the click of a button...ITS AWSOME IKR !!
+# # We'll havve to be using this code to  cretae the required Code character effect in my application
+# class Ui_MainWindow(object):
+#     def setupUi(self, MainWindow):
+#         MainWindow.setObjectName("MainWindow")
+#         MainWindow.resize(800, 600)
+#         self.centralwidget = QtWidgets.QWidget(MainWindow)
+#         self.centralwidget.setObjectName("centralwidget")
+#         self.photo = QtWidgets.QLabel(self.centralwidget)
+#         self.photo.setGeometry(QtCore.QRect(0, 0, 841, 511))
+#         self.photo.setText("")
+#         self.photo.setPixmap(QtGui.QPixmap("cat.jpg"))
+#         self.photo.setScaledContents(True)
+#         self.photo.setObjectName("photo")
+#         self.cat = QtWidgets.QPushButton(self.centralwidget)
+#         self.cat.setGeometry(QtCore.QRect(0, 510, 411, 41))
+#         self.cat.setObjectName("cat")
+#         self.dog = QtWidgets.QPushButton(self.centralwidget)
+#         self.dog.setGeometry(QtCore.QRect(410, 510, 391, 41))
+#         self.dog.setObjectName("dog")
+#         MainWindow.setCentralWidget(self.centralwidget)
+#         self.menubar = QtWidgets.QMenuBar(MainWindow)
+#         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
+#         self.menubar.setObjectName("menubar")
+#         MainWindow.setMenuBar(self.menubar)
+#         self.statusbar = QtWidgets.QStatusBar(MainWindow)
+#         self.statusbar.setObjectName("statusbar")
+#         MainWindow.setStatusBar(self.statusbar)
+#
+#         self.retranslateUi(MainWindow)
+#         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+#
+#         self.dog.clicked.connect(self.show_dog)
+#         self.cat.clicked.connect(self.show_cat)
+#
+#     def retranslateUi(self, MainWindow):
+#         _translate = QtCore.QCoreApplication.translate
+#         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+#         self.cat.setText(_translate("MainWindow", "CAT"))
+#         self.dog.setText(_translate("MainWindow", "DOG"))
+#
+#     def show_dog(self):
+#         self.photo.setPixmap(QtGui.QPixmap("character_code_images/img1.jpg"))
+#         print("The code was he")
+#
+#     def show_cat(self):
+#         self.photo.setPixmap(QtGui.QPixmap("character_code_images/img2.jpg"))
+#
+#         print("The code was he")
+#
+#
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     MainWindow = QtWidgets.QMainWindow()
+#     ui = Ui_MainWindow()
+#     ui.setupUi(MainWindow)
+#     MainWindow.show()
+#     sys.exit(app.exec_())
+# # add the images thhat arun balaji send'd to the chraccter code images folder and then call it inn oyour main code this is plain awesome
+f=open('last_threshold.txt','w')
+f.write(f'{1500}')
+f.close()
+# import os
+# print(os.listdir("sentences_folder"))
